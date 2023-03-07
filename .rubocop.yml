@@ -60,3 +60,9 @@ Style/HashTransformValues:
   Enabled: false
 Layout/EndOfLine:
   EnforcedStyle: lf
+StringLiterals:
+  Enabled: false
+Layout/EndOfLine:
+   Enabled: False
+Style/EmptyMethod:
+  Enabled: False
