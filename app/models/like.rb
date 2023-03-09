@@ -3,7 +3,7 @@ class Like < ApplicationRecord
   belongs_to :post
 
   def likes_counter_updater
-    author.increment!(likes_counter)
+    author.increment!(:likes_counter)
     # post = Post.find_by(id: post_id)
     # post.likes_counter = Like.where(author_id:).count
     # post.save
