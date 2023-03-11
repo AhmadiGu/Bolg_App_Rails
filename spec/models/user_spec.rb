@@ -24,10 +24,6 @@ RSpec.describe User, type: :model do
 
   after { subject.save }
   context 'Testing user behavior' do
-    # user = User.new(name: 'Ahmad')
-    # user.id = 1
-    # user.save
-
     before {
       10.times {
         Post.create(author: subject, title: 'Title', text: 'Text', comments_counter: 0, likes_counter: 0)
