@@ -66,3 +66,7 @@ Layout/EndOfLine:
    Enabled: False
 Style/EmptyMethod:
   Enabled: False
+Style/RedundantConstantBase:
+  Enabled: False
+Style/BlockComments:
+  Enabled: False
