@@ -40,6 +40,8 @@ Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+Style/BlockDelimiters:
+  Enabled: false
 
 Layout/HashAlignment:
   EnforcedColonStyle: key
@@ -65,4 +67,8 @@ StringLiterals:
 Layout/EndOfLine:
    Enabled: False
 Style/EmptyMethod:
+  Enabled: False
+Style/RedundantConstantBase:
+  Enabled: False
+Style/BlockComments:
   Enabled: False
