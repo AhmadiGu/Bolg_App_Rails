@@ -81,6 +81,8 @@ Install this project with:
 To run the project, execute the following command:
 
 `rails server`
+
+## Test
 `rspec`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -102,6 +104,10 @@ To run the project, execute the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Add More methods**
+- [ ] **Database will be more efficient**
+- [ ] **UI will be more human friendly**
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,7 +124,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project by staring it.
+If you like this project then don't forget to give a star ⭐ on this repository 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
