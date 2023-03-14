@@ -74,13 +74,14 @@ Clone this repository by using the command line :
 
 Install this project with:
 
-`npm gemfile`
+`bundle install `
 
 ### Usage
 
 To run the project, execute the following command:
 
 `rails server`
+`rspec`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
