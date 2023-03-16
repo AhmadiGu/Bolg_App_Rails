@@ -1,2 +1,20 @@
-<h1>This is selected post</h1>
-<a href="../">Home</a>
+<div class='app'>
+  <h1>This is selected post</h1>
+  <a href="../" class='btn'>Home</a>
+
+    <div class='user-posts'> 
+        <p class='title'>Post #<%= @post.id%> by <%= User.find_by(id: @post.author_id).name  %></p>
+        <p class='text'><%= @post.text%></p>
+        <div class='comment-like'>
+        <span>Comments: <%= @post.comments_counter || 0%>  </span>
+        <span> Likes: <%= @post.likes_counter || 0%></span>
+        </div>
+    </div>
+    <div class="post-comments">
+    <% Comment.where(post_id:@post.id).each do |comment| %> 
+      <div>
+      <p> <span><%= User.find_by(id: comment.author_id).name %>:</span> <span class='comment-text'><%= comment.text %></span></p>
+      </div> 
+    <%end%>
+    </div>
+</div>

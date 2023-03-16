@@ -13,3 +13,167 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Playfair+Display&family=Poppins:wght@200;300;400;500;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  /* background-image: radial-gradient( circle 759px at -6.7% 50%, rgba(80,131,73,1) 0%,
+   rgba(140,209,131,1) 26.2%,
+   rgba(178,231,170,1) 50.6%, rgba(144,213,135,1) 74.1%, rgba(75,118,69,1) 100.3% ); */
+
+  /* background-image: linear-gradient(to right, #fffbd5, #b20a2c); */
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  color: #4386bf;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 300;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgba(245, 245, 245, 0.473);
+  color: rgba(10, 10, 10, 0.829);
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #0290ff, -2px -2px 2px #b20a2c;
+}
+
+.app {
+  /* background-color: transparent; */
+  background-image: linear-gradient(to left, #fffbd5, #b20a2c);
+  width: 92%;
+  height: auto;
+  margin: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  align-items: center;
+  box-shadow: 2px 4px 5px darkgrey, -2px -4px 5px darkgrey;
+  padding: 1.2rem;
+}
+
+.user-container {
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  padding: 3rem;
+  margin: 1% 4%;
+  gap: 40px;
+}
+
+.user-container img {
+  width: 30%;
+}
+
+.user-info {
+  background: peru;
+  width: 60%;
+  padding: 1rem;
+}
+
+.user-info h3 {
+  color: #b20a2c;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.user-info p {
+  background: rgb(219, 163, 10);
+  text-align: end;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.user-bio-container {
+  width: 90%;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  padding: 3rem;
+  margin: 1% 4%;
+}
+
+.user-bio-container h3,
+.user-posts .title {
+  color: #220208;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.user-bio-container p,
+.user-posts .text {
+  color: #0c0808;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.user-posts {
+  width: 90%;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  padding: 3rem;
+  margin: 1% 4%;
+}
+
+.user-posts .text,
+.user-posts .title,
+.posts .title,
+.posts .text {
+  font-weight: 500;
+}
+
+.user-posts .comment-like,
+.posts .comment-like {
+  text-align: end;
+}
+
+.post-comments p span {
+  color: #330910;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-right: 1%;
+}
+
+.user-posts .comment-like span,
+.posts .comment-like span {
+  padding-right: 2.5%;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.user-posts .comment-like span:hover,
+.posts .comment-like span:hover {
+  text-shadow: 2px 2px  #0291ffa9;
+  color: #b20a2c8e;
+}
+
+.posts,
+.post-comments {
+  width: 95%;
+  border-radius: 4px;
+  border: 1px solid #b20a2c;
+  padding: 1rem;
+  margin: 1% 0.2%;
+}
+
+.post-comments p span.comment-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0c0809;
+}

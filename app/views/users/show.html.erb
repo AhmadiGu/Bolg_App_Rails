@@ -1,2 +1,35 @@
-<h1>This is selected user</h1>
-<a href="../">Home</a>
+<div class='app'>
+  <h1>User Details: <span> <%= @user.name%></span></h1>
+  <a href="../" class='btn'>Home</a>
+
+  <div class='user-container'> 
+    <img src= "<%= @user.photo %>" alt="User Profile"/>
+    <div class='user-info'>
+      <h3><%= @user.name%></h3>
+      <p>Number of posts: <%= @user.posts_counter %> </p>
+    </div>
+  </div>
+
+  <div class="user-bio-container"> 
+    <h3>Bio</h3>
+    <p><%= @user.bio%></p> 
+  </div>
+
+  <div class='user-posts'>  
+        <div>
+         <% @user.recent_posts.each do |post| %>
+         <p class='title'>Post #<%= post.id%>: <%= link_to "#{post.title}", "./#{@user.id}/posts/#{post.id}" %></p>
+         <p class='text'><%= post.text[0...100]%>...</p>
+         <div class='comment-like'>
+            <span>Comments: <%= post.comments_counter || 0%>  </span>
+            <span> Likes: <%= post.likes_counter || 0%></span>
+         </div>
+         <%end%>
+        </div>
+        
+  </div>
+
+  <form action="./<%= @user.id%>/posts" method="get" class="see-all-posts">
+    <button type="submit" class='btn'>See all posts</button>
+  </form>
+</div>

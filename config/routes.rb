@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'pages/blog_app'
+  # get 'pages/blog_app'
+  root 'users#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
