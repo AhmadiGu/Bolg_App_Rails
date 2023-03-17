@@ -17,12 +17,6 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-
-  /* background-image: radial-gradient( circle 759px at -6.7% 50%, rgba(80,131,73,1) 0%,
-   rgba(140,209,131,1) 26.2%,
-   rgba(178,231,170,1) 50.6%, rgba(144,213,135,1) 74.1%, rgba(75,118,69,1) 100.3% ); */
-
-  /* background-image: linear-gradient(to right, #fffbd5, #b20a2c); */
 }
 
 * {
@@ -159,7 +153,6 @@ a {
 
 .user-posts .comment-like span:hover,
 .posts .comment-like span:hover {
-  text-shadow: 2px 2px  #0291ffa9;
   color: #b20a2c8e;
 }
 
@@ -176,4 +169,91 @@ a {
   font-size: 1.2rem;
   font-weight: 500;
   color: #0c0809;
+}
+
+.create-post {
+  padding-left: 77%;
+  display: flex;
+  gap: 40px;
+}
+
+.create-post .btn {
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px rgb(219, 163, 10), -2px -2px 2px  peru;
+}
+
+.create-post .btn:hover {
+  background: rgba(245, 245, 245, 0.473);
+  color: rgba(10, 10, 10, 0.829);
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #0290ff, -2px -2px 2px #b20a2c;
+}
+
+.create-post-container,
+.create-comment-container {
+  display: flex;
+  justify-content: center;
+  background: #b20a2cab;
+  margin-top: 2%;
+}
+
+.create-post-container form,
+.create-comment-container form {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 145px;
+}
+
+.create-post-container form input[type=text] {
+  color: rgba(10, 10, 10, 0.829);
+  border-radius: 20px;
+  outline: none;
+  font-size: 20px;
+  padding: 12px 35px;
+  border: none;
+}
+
+.create-post-container form input[type=submit],
+.create-comment-container form input[type=submit] {
+  background: #df0d37;
+  color: wheat;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #fbfbfc, -2px -2px 2px #fcfafb;
+  padding: 12px 0;
+  font-size: 20px;
+  width: 50%;
+}
+
+.create-post-container form label,
+.create-comment-container form label {
+  color: wheat;
+  font-size: 20px;
+}
+
+.create-comment-container form input[type=submit] {
+  width: 100%;
+}
+
+.create-post form input[type=submit] {
+  background-color: transparent;
+  border: none;
+  color: #4386bf;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 300;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px rgb(219, 163, 10), -2px -2px 2px  peru;
+}
+
+.create-comment-container form textarea {
+  color: rgba(10, 10, 10, 0.829);
+  border-radius: 20px;
+  outline: none;
+  font-size: 20px;
+  padding: 12px 65px;
+  border: none;
+  height: 150px;
+  background-color: #f8f8f8;
+  resize: none;
 }
