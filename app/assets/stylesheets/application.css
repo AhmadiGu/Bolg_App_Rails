@@ -73,13 +73,18 @@ a {
 }
 
 .user-container img {
-  width: 30%;
+  width: 15%;
+  margin-right: 6%;
+  margin-left: 4%;
+  border-radius: 50%;
+  margin-top: -2.5%;
 }
 
 .user-info {
   background: peru;
   width: 60%;
   padding: 1rem;
+  height: 10vh;
 }
 
 .user-info h3 {
