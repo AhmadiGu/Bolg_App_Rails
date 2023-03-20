@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Users show view', type: :system do
+RSpec.describe 'Users show view', type: :feature do
   describe 'Show page' do
     subject { User.create(name: 'Gul', photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJHYna2rR4LtBNlA3gUSGxsmaiYY4PyxQEcA&usqp=CAU', bio: 'Spring Sun', posts_counter: 0) }
 
