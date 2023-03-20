@@ -8,7 +8,10 @@
       <h3><%= @user.name%></h3>
       <p>Number of posts: <%= @user.posts_counter %> </p>
     </div>
-  </div>
+    <div class='create-post'>
+       <button class="btn"><%= link_to 'Create post', new_user_post_path(user_id: @user.id) %></button>
+    </div>
+  </div> 
 
   <div class="user-bio-container"> 
     <h3>Bio</h3>
@@ -29,7 +32,7 @@
         
   </div>
 
-  <form action="./<%= @user.id%>/posts" method="get" class="see-all-posts">
+  <form action="./<%= @user.id%>/posts" method="get">
     <button type="submit" class='btn'>See all posts</button>
   </form>
 </div>

@@ -6,15 +6,28 @@
         <p class='title'>Post #<%= @post.id%> by <%= User.find_by(id: @post.author_id).name  %></p>
         <p class='text'><%= @post.text%></p>
         <div class='comment-like'>
-        <span>Comments: <%= @post.comments_counter || 0%>  </span>
-        <span> Likes: <%= @post.likes_counter || 0%></span>
+           <span>Comments: <%= @post.comments_counter || 0%>  </span>
+           <span> Likes: <%= @post.likes_counter || 0%></span>
         </div>
-    </div>
+        <br>
+        <div class='create-post' >
+        <button class='btn'><%= link_to 'Create comment', new_user_post_comment_path(user_id:@post.author_id ,post_id:@post.id) %></button>
+        <%= form_with model: @post, url: "./#{@post.id}/likes", method: :post do |f|%>
+          <%= f.submit 'Like' %>
+        <%end%>
+         
+        </div>
+    </div> 
+   
     <div class="post-comments">
-    <% Comment.where(post_id:@post.id).each do |comment| %> 
-      <div>
-      <p> <span><%= User.find_by(id: comment.author_id).name %>:</span> <span class='comment-text'><%= comment.text %></span></p>
-      </div> 
-    <%end%>
+      <% if @post.recent_comments.any? %>
+        <% Comment.where(post_id:@post.id).each do |comment| %>
+          <div>
+            <p><span><%= User.find_by(id: comment.author_id).name %>:</span> <span class='comment-text'><%= comment.text[0...100] %>...</span></p>
+          </div>
+     <% end %>
     </div>
+    <% else %>
+       <p>No comments added yet.</p>
+    <% end %> 
 </div>

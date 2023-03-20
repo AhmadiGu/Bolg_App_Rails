@@ -10,9 +10,6 @@ class Post < ApplicationRecord
 
   def posts_counter_updater
     author.increment!(:posts_counter)
-    # user = User.find_by(id: author_id)
-    # user.posts_counter = Post.where(author_id:).count
-    # user.save
   end
 
   def recent_comments

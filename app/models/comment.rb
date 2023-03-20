@@ -4,8 +4,6 @@ class Comment < ApplicationRecord
   after_save :comments_counter_updater
 
   def comments_counter_updater
-    post = Post.find_by(id: post_id)
-    post.comments_counter = Comment.where(author_id:).count
-    post.save
+    post.increment!(:comments_counter)
   end
 end
