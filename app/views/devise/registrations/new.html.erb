@@ -3,10 +3,21 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+  
+  <div class="field">
+    <%= f.label :user_name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "user" %>
+  </div>
 
   <div class="field">
+    <%= f.label :posts %>
+    <em>(<%=0 %> for the first time)</em><br />
+    <%= f.number_field :posts_counter, autocomplete: "posts_counter" %>
+  </div>
+  
+  <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email,  autocomplete: "email" %>
   </div>
 
   <div class="field">
