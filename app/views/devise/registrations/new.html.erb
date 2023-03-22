@@ -6,13 +6,7 @@
   
   <div class="field">
     <%= f.label :user_name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "user" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :posts %>
-    <em>(<%=0 %> for the first time)</em><br />
-    <%= f.number_field :posts_counter, autocomplete: "posts_counter" %>
+    <%= f.text_field :name, autofocus: true %>
   </div>
   
   <div class="field">
@@ -36,6 +30,9 @@
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+
+  <%= f.hidden_field :posts_counter, :value => 0%>
+  <%= f.hidden_field :photo, :value => 'https://icon-library.com/images/no-profile-pic-icon/no-profile-pic-icon-24.jpg'%>
 <% end %>
 
 <%= render "devise/shared/links" %>
