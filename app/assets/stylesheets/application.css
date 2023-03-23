@@ -348,3 +348,20 @@ button[type=submit] {
   background-color: #f8f8f8;
   resize: none;
 }
+
+.cancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: end;
+  width: 100%;
+  gap: 20px;
+}
+
+.cancel button {
+  width: 300px;
+}
+
+.cancel a {
+  margin-left: 10%;
+}

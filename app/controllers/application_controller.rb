@@ -1,8 +1,4 @@
 class ApplicationController < ActionController::Base
-  # def current_user
-  #   # User.first
-  #   User.find_by(id: params[:user_id])
-  # end
   before_action :authenticate_user!
   protect_from_forgery with: :exception
 
@@ -12,6 +8,6 @@ class ApplicationController < ActionController::Base
 
   def update_allowed_parameters
     devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :posts_counter, :email, :password, :photo, :password_confirmation) }
-    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :current_password) }
+    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :photo, :bio, :email, :password, :current_password) }
   end
 end
