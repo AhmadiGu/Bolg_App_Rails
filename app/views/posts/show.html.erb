@@ -28,7 +28,7 @@
             <p><span><%= User.find_by(id: comment.author_id).name %>:</span> <span class='comment-text'><%= comment.text[0...100] %>...</span></p>
           </div>
            <% if can? :destroy, comment %>
-           <span> <%= button_to "Delete comment", user_post_comment_path(comment.author_id, comment.post, comment), method: :delete, data: { turbo: false } %></span>
+           <%= button_to "Delete comment", user_post_comment_path(comment.author_id, comment.post, comment), method: :delete, data: { turbo: false } %>
           <% end %>
      <% end %>
     </div>

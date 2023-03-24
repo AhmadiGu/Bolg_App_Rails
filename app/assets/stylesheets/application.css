@@ -228,6 +228,11 @@ button[type=submit] {
   text-align: end;
 }
 
+.post-comments {
+  display: flex;
+  justify-content: space-between;
+}
+
 .post-comments p span {
   color: #330910;
   font-size: 1.2rem;
@@ -260,6 +265,11 @@ button[type=submit] {
   font-size: 1.2rem;
   font-weight: 500;
   color: #0c0809;
+}
+
+.post-comments button {
+  width: 250px;
+  margin-right: 20px;
 }
 
 .create-post {
