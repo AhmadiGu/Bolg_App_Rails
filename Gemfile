@@ -73,6 +73,7 @@ group :test do
 end
 
 gem "bullet"
+gem 'cancancan'
 gem 'devise'
 gem 'rails-controller-testing'
 gem 'rspec-rails', '~> 4.0.0.beta2'
