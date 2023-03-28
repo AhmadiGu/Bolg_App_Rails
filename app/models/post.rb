@@ -1,8 +1,9 @@
 class Post < ApplicationRecord
   belongs_to :author, class_name: 'User'
-  has_many :likes
-  has_many :comments
+  has_many :likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
   after_save :posts_counter_updater
+  after_destroy :posts_counter_updater_destroy
 
   validates :title, presence: true, length: { maximum: 250 }
   validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
@@ -10,6 +11,10 @@ class Post < ApplicationRecord
 
   def posts_counter_updater
     author.increment!(:posts_counter)
+  end
+
+  def posts_counter_updater_destroy
+    author.decrement!(:posts_counter)
   end
 
   def recent_comments

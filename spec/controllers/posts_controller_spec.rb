@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'PostsController', type: :request do
   context 'Make a get request to index' do
     before(:example) do
-      get '/users/1/posts'
+      get '/users/102/posts'
     end
 
     it 'Response status' do
@@ -15,13 +15,13 @@ RSpec.describe 'PostsController', type: :request do
     end
 
     it 'Response body includes correct text' do
-      expect(response.body).to include('This is posts list')
+      expect(response.body).to include('This is Tom posts list')
     end
   end
 
   context 'Make a get request to user' do
     before(:example) do
-      get '/users/1/posts/1'
+      get '/users/102/posts/80'
     end
 
     it 'Response status' do

@@ -1,11 +1,14 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find_by(id: params[:user_id])
-    @posts = Post.where(author_id: params[:user_id])
+    @posts = Post.where(author_id: params[:user_id]).includes(:comments)
   end
 
   def show
     @post = Post.find_by(id: params[:id])
+    @user = User.find(params[:user_id])
   end
 
   def new
@@ -25,5 +28,17 @@ class PostsController < ApplicationController
         end
       end
     end
+  end
+
+  def destroy
+    @post.comments.destroy_all
+    @post.destroy
+    redirect_to user_path(params[:user_id])
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end

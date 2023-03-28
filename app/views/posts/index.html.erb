@@ -11,7 +11,7 @@
     </div>
 
     <div class='user-posts'> 
-      <%= Post.where(author_id: @user.id).each do |post| %> 
+      <%= @posts.each do |post| %> 
         <div class='posts'>
           <p class='title'>Post #<%=post.id%>: <%= link_to "#{post.title}", "#{user_posts_path}/#{post.id}"%></p>
           <p class='text'><%= post.text[0...100]%>...</p>
@@ -23,10 +23,10 @@
 
         <div class="post-comments">
           <p>Comments:</p>
-            <% if post.recent_comments.any? %>
-                <% post.recent_comments.each do |comment| %>
+            <% if post.comments.any? %>
+                <% post.comments.each do |comment| %>
                 <div>
-                    <p> <span><%= User.find_by(id: comment.author_id).name %>:</span> <span class='comment-text'><%= comment.text[0...100] %>...</span></p>
+                    <p> <span><%= comment.author.name %>:</span> <span class='comment-text'><%= comment.text[0...100] %>...</span></p>
                 </div>
                 <% end %>
               <% else %>
