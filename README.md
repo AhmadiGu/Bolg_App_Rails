@@ -96,10 +96,10 @@ To run the project, execute the following command:
 - GitHub: [@githubhandle](https://github.com/AhmadiGu)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/gulalai-ahmadi/)
 
-👤 **Joshua Blue-Jack**
+👤 ****
 
-- GitHub: [Tamunokuro](https://github.com/Tamunokuro)
-- LinkedIn: [Joshua Blue-Jack](https://www.linkedin.com/in/joshua-blue-jack/)
+- GitHub:  
+- LinkedIn:  
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
