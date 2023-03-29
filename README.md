@@ -96,9 +96,11 @@ To run the project, execute the following command:
 - GitHub: [@githubhandle](https://github.com/AhmadiGu)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/gulalai-ahmadi/)
 
-👤 ** **
- 
+👤 **Ayesha Arshad**
 
+- GitHub: [@shella12](https://github.com/shella12)
+- Twitter: [@Ayesha Arshad](https://twitter.com/AyeshaA03712974)
+- LinkedIn: [Ayesha Arshad](https://www.linkedin.com/in/ayesha-arshad-a690a015a/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
