@@ -20,7 +20,7 @@ RSpec.describe 'UsersController', type: :request do
 
   context 'Make a get request to user' do
     before(:example) do
-      get '/users/102'
+      get '/users/183'
     end
 
     it 'Response status' do
@@ -32,7 +32,7 @@ RSpec.describe 'UsersController', type: :request do
     end
 
     it 'Response body includes correct text' do
-      expect(response.body).to include('User Details: Tom')
+      expect(response.body).to include('User Details:Gulalai Ahmadi')
     end
   end
 end
