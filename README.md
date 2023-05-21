@@ -94,9 +94,9 @@ To run the project, execute the following command:
 👤 **Gulalai Ahmadi**
 
 - GitHub: [@githubhandle](https://github.com/AhmadiGu)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/gulalai-ahmadi/)
-
-👤 **Ayesha Arshad**
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/gulalai-ahmadi/) 
+ 
+👤 **Ayesha Arshad** 
 
 - GitHub: [@shella12](https://github.com/shella12)
 - Twitter: [@Ayesha Arshad](https://twitter.com/AyeshaA03712974)
