@@ -17,6 +17,10 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 * {
@@ -26,6 +30,90 @@ body {
 
 a {
   text-decoration: none;
+  border: none;
+  color: #df0d37;
+  font-size: 1.5rem;
+  padding: 0.1rem 1rem;
+  font-weight: 500;
+  align-items: center;
+  border-radius: 20px;
+}
+
+a:hover {
+  background: rgba(245, 245, 245, 0.473);
+  color: rgba(10, 10, 10, 0.829);
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #0290ff, -2px -2px 2px #b20a2c;
+}
+
+.alert,
+.notice {
+  text-align: center;
+  width: max-content;
+  font-size: 1.3rem;
+  background: rgba(245, 245, 245, 0.473);
+  color: #7c0c22;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #0290ff, -2px -2px 2px #b20a2c;
+  margin-top: 10px;
+  margin-left: 3%;
+  font-weight: 500;
+}
+
+h2 {
+  margin-bottom: 2%;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.field {
+  background: #df0d37;
+  color: wheat;
+  padding: 15px 145px;
+  font-size: 20px;
+}
+
+.field input {
+  border-radius: 20px;
+  outline: none;
+  font-size: 20px;
+  padding: 12px 55px;
+  border: none;
+}
+
+.actions input,
+button[type=submit] {
+  background-color: #df0d37;
+  border: none;
+  color: wheat;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 300;
+  align-items: center;
+  border-radius: 20px;
+  margin-left: 80%;
+  margin-top: 3%;
+  box-shadow: 3px 6px 3px rgb(223, 213, 187), -2px -2px 2px  peru;
+}
+
+button[type=submit] {
+  width: 200px;
+  margin-left: 10%;
+}
+
+.forget input {
+  background-color: #df0d37;
+  border: none;
+  color: wheat;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 300;
+  align-items: center;
+  border-radius: 20px;
+  margin-left: 25%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  box-shadow: 3px 6px 3px rgb(223, 213, 187), -2px -2px 2px  peru;
 }
 
 .btn {
@@ -36,7 +124,6 @@ a {
   padding: 0.5rem 1rem;
   font-weight: 300;
   align-items: center;
-  cursor: pointer;
 }
 
 .btn:hover {
@@ -47,11 +134,10 @@ a {
 }
 
 .app {
-  /* background-color: transparent; */
   background-image: linear-gradient(to left, #fffbd5, #b20a2c);
   width: 92%;
   height: auto;
-  margin: 4%;
+  margin-top: 1%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,6 +228,11 @@ a {
   text-align: end;
 }
 
+.post-comments {
+  display: flex;
+  justify-content: space-between;
+}
+
 .post-comments p span {
   color: #330910;
   font-size: 1.2rem;
@@ -176,10 +267,17 @@ a {
   color: #0c0809;
 }
 
+.post-comments button {
+  width: 250px;
+  margin-right: 20px;
+}
+
 .create-post {
-  padding-left: 77%;
   display: flex;
   gap: 40px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
 }
 
 .create-post .btn {
@@ -261,4 +359,21 @@ a {
   height: 150px;
   background-color: #f8f8f8;
   resize: none;
+}
+
+.cancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: end;
+  width: 100%;
+  gap: 20px;
+}
+
+.cancel button {
+  width: 300px;
+}
+
+.cancel a {
+  margin-left: 10%;
 }
